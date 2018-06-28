@@ -1,0 +1,39 @@
+﻿<File version="3.1">
+  <Code>
+    <![CDATA[#Define a Param block to use custom parameters in the project
+#Param ($CustomParameter)
+
+function Main {
+<#
+    .SYNOPSIS
+        The Main function starts the project application.
+    
+    .PARAMETER Commandline
+        $Commandline contains the complete argument string passed to the script packager executable.
+    
+    .NOTES
+        Use this function to initialize your script and to call GUI forms.
+		
+    .NOTES
+        To get the console output in the Packager (Forms Engine) use: 
+		$ConsoleOutput (Type: System.Collections.ArrayList)
+#>
+	Param ([String]$Commandline)
+		
+	#--------------------------------------------------------------------------
+	#TODO: Add initialization script here (Load modules and check requirements)
+	
+	
+	#--------------------------------------------------------------------------
+	
+	if((Show-MainForm_psf) -eq 'OK')
+	{
+		
+	}
+	
+	$script:ExitCode = 0 #Set the exit code for the Packager
+}
+
+
+]]></Code>
+</File>
