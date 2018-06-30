@@ -28,9 +28,9 @@ function Get-ScriptDirectory
 	}
 }
 
-Import-Module ActiveDirectory
-Import-Module ADSync
-$ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" }
+Import-Module ActiveDirectory -ErrorAction SilentlyContinue
+Import-Module ADSync -ErrorAction SilentlyContinue
+$ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" } -ErrorAction SilentlyContinue
 
 #region Get-DateSortable
 function Get-datesortable
