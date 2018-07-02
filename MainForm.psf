@@ -1225,9 +1225,10 @@ $buttonCreateUser_Click = {
 					If ($groups -ne $null)
 					{
 						add-logs -text 'LOG: Security Groups found'
+						$DN = ($User).DisplayName
 						foreach ($group in $groups)
 						{
-							add-logs -text "LOG: Adding $User to $Group"
+							add-logs -text "LOG: Adding $DN to $Group"
 							$GroupGuid = ((get-msolgroup | where-object { $_.displayname -eq $Group }).ObjectID).GUID
 							$UserGUID = (($User).ObjectID).GUID
 							add-logs -text "CMD: Add-MsolGroupMember -Identity $GroupGuid -Members $UserGUID"
@@ -1359,9 +1360,10 @@ $buttonCreateUser_Click = {
 					If ($groups -ne $null)
 					{
 						add-logs -text 'LOG: Security Groups found'
+						$DN = ($User).DisplayName
 						foreach ($group in $groups)
 						{
-							add-logs -text "LOG: Adding $User to $Group"
+							add-logs -text "LOG: Adding $DN to $Group"
 							$GroupGuid = ((get-msolgroup | where-object { $_.displayname -eq $Group }).ObjectID).GUID
 							$UserGUID = (($User).ObjectID).GUID
 							add-logs -text "CMD: Add-MsolGroupMember -Identity $GroupGuid -Members $UserGUID"
