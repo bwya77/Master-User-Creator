@@ -1260,10 +1260,11 @@ $buttonCreateUser_Click = {
 						{
 							add-logs -text 'LOG: Mail Groups found'
 							$User = Get-MSOLUser | Where-Object { $_.Displayname -eq $textboxO365DisplayName.text }
+							$DN = ($User).DisplayName
 							foreach ($group in $groups)
 							{
-								add-logs -text "LOG: Adding $User to $Group"
-								add-logs -text "CMD: Add-DistributionGroupMember -Identity $Group -Member $User"
+								add-logs -text "LOG: Adding $DN to $Group"
+								add-logs -text "CMD: Add-DistributionGroupMember -Identity $Group -Member $DN"
 								Try
 								{
 									Add-DistributionGroupMember -Identity "$Group" -Member ($User).DisplayName
@@ -1281,6 +1282,27 @@ $buttonCreateUser_Click = {
 							add-logs -text 'LOG: No Mail Groups checked'
 						}
 						Add-Logs -text 'LOG: Done with Mail Groups'
+						
+						#Shared Mailboxes
+						Add-Logs -text 'LOG: Checking if there are Share Mailboxes the user will be granted Full Access to'
+						$SharedMailboxes = $checkedlistboxsharedmailboxes.CheckedItems
+						#If there are shared mailboxes to add the user to (full access rights)
+						If ($SharedMailboxes -ne $null)
+						{
+							$User = Get-MSOLUser | Where-Object { $_.Displayname -eq $textboxO365DisplayName.text }
+							$DN = ($User).DisplayName
+							foreach ($SharedMailbox in $SharedMailboxes)
+							{
+								Add-Logs -text "LOG: Adding $DN Full Access to $SharedMailbox"
+								Add-Logs -text "CMD: Add-MailboxPermission $SharedMailbox -User $DN -AccessRights FullAccess"
+								Add-MailboxPermission $SharedMailbox -User ($User).DisplayName -AccessRights FullAccess
+							}
+						}
+						Else
+						{
+							Add-Logs -text 'LOG: No Shared Mailboxes selected'
+						}
+						Add-Logs -text 'LOG: Done with Shared Mailboxes'
 						
 						Add-Logs -text 'LOG: Checking if Hide from global address list is set to True'
 						#Hide from GAL
@@ -1372,10 +1394,11 @@ $buttonCreateUser_Click = {
 						{
 							add-logs -text 'LOG: Mail Groups found'
 							$User = Get-MSOLUser | Where-Object { $_.Displayname -eq $textboxO365DisplayName.text }
+							$DN = ($User).DisplayName
 							foreach ($group in $groups)
 							{
-								add-logs -text "LOG: Adding $User to $Group"
-								add-logs -text "CMD: Add-DistributionGroupMember -Identity $Group -Member $User"
+								add-logs -text "LOG: Adding $DN to $Group"
+								add-logs -text "CMD: Add-DistributionGroupMember -Identity $Group -Member $DN"
 								Try
 								{
 									Add-DistributionGroupMember -Identity "$Group" -Member ($User).DisplayName
@@ -1393,6 +1416,27 @@ $buttonCreateUser_Click = {
 							add-logs -text 'LOG: No Mail Groups checked'
 						}
 						Add-Logs -text 'LOG: Done with Mail Groups'
+						
+						#Shared Mailboxes
+						Add-Logs -text 'LOG: Checking if there are Share Mailboxes the user will be granted Full Access to'
+						$SharedMailboxes = $checkedlistboxsharedmailboxes.CheckedItems
+						#If there are shared mailboxes to add the user to (full access rights)
+						If ($SharedMailboxes -ne $null)
+						{
+							$User = Get-MSOLUser | Where-Object { $_.Displayname -eq $textboxO365DisplayName.text }
+							$DN = ($User).DisplayName
+							foreach ($SharedMailbox in $SharedMailboxes)
+							{
+								Add-Logs -text "LOG: Adding $DN Full Access to $SharedMailbox"
+								Add-Logs -text "CMD: Add-MailboxPermission $SharedMailbox -User $DN -AccessRights FullAccess"
+								Add-MailboxPermission $SharedMailbox -User ($User).DisplayName -AccessRights FullAccess
+							}
+						}
+						Else
+						{
+							Add-Logs -text 'LOG: No Shared Mailboxes selected'
+						}
+						Add-Logs -text 'LOG: Done with Shared Mailboxes'
 						
 						Add-Logs -text 'LOG: Checking if Hide from global address list is set to True'
 						#Hide from GAL
