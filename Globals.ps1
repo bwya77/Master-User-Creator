@@ -28,6 +28,7 @@ function Get-ScriptDirectory
 	}
 }
 
+
 Import-Module ActiveDirectory -ErrorAction SilentlyContinue
 Import-Module ADSync -ErrorAction SilentlyContinue
 $ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" } -ErrorAction SilentlyContinue
