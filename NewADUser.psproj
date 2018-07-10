@@ -9,6 +9,5 @@
     <File Build="0" Shared="True" ReferenceFunction="Invoke-Global_ps1">Globals.ps1</File>
     <File Build="0" ReferenceFunction="Show-ChildForm_psf">ChildForm.psf</File>
     <File Build="0" ReferenceFunction="Show-MessageBox_psf">MessageBox.psf</File>
-    <File Build="0" ReferenceFunction="Show-GettingStarted_psf">GettingStarted.psf</File>
   </Files>
 </Project>
