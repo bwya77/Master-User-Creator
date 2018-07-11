@@ -150,8 +150,7 @@ $Sku = @{
 	"FLOW_P2"						     = "Microsoft Flow Plan 2"
 }
 
-Import-Module ActiveDirectory -ErrorAction SilentlyContinue
-Import-Module ADSync -ErrorAction SilentlyContinue
+
 $ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" } -ErrorAction SilentlyContinue
 
 #region Get-DateSortable

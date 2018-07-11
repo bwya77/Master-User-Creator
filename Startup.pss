@@ -1,6 +1,5 @@
 ﻿<File version="3.1">
-  <Code>
-    <![CDATA[#Define a Param block to use custom parameters in the project
+  <Code><![CDATA[#Define a Param block to use custom parameters in the project
 #Param ($CustomParameter)
 
 function Main {
@@ -21,7 +20,8 @@ function Main {
 	Param ([String]$Commandline)
 		
 	#--------------------------------------------------------------------------
-	#TODO: Add initialization script here (Load modules and check requirements)
+	Import-Module ActiveDirectory -ErrorAction SilentlyContinue
+	Import-Module ADSync -ErrorAction SilentlyContinue
 	
 	
 	#--------------------------------------------------------------------------
