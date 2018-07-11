@@ -77,3 +77,8 @@ Certain fields are required prior to creating your user. These fields will have 
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/ADSync.png" width="500">
 
 If the ADSync module is detected on the system, the application will automatically enable the ADSync option and disable the manual user creation for Office 365 to allow you to automatically run an ADSync once your Active Directory User has been created. 
+
+### Copy Attributes
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/CopyAttributes.png" width="200">
+
+When you go to create an Office 365 user, you have the option of copying the attributes you just entered for your Office 365 user. This is extremely beneficial in environments that do not have ADSync set up. Instead of entering everything twice, you can just click a button and everything will copy over. 
