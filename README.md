@@ -20,7 +20,7 @@ Quickly and easily create and configure Active Directory and Office 365 Users at
 - And More!
 
 ### Active Directory User
-![New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif)
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif" width="500">
 
 ### Office 365 User
 
@@ -45,13 +45,13 @@ When creating your new user (AD or O365) you can either generate a random passwo
 
 ### Organizational Units
 
-![Organizational Unit](http://thelazyadministrator.com/wp-content/uploads/2018/07/OU-Place.png)
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/OU-Place.png" width="500">
 
 When you create your Active Directory User you can specify which OU you want them to reside in by using the drop-down. If nothing is selected it will place them in whichever OU you configured new User objects to be placed in.
 
 ### Office 365 Licenses
 
-![Office 365 Friendly License Name and Assignment](http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png)
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png" width="500">
 
 When creating an Office 365 user you can assign them a license right away. AccountSKUs are converted to friendly names to make picking out a license easier.
 
