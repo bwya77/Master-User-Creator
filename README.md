@@ -82,3 +82,9 @@ If the ADSync module is detected on the system, the application will automatical
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/CopyAttributes.png" width="200">
 
 When you go to create an Office 365 user, you have the option of copying the attributes you just entered for your Office 365 user. This is extremely beneficial in environments that do not have ADSync set up. Instead of entering everything twice, you can just click a button and everything will copy over. 
+
+___
+## Prerequisites
+- PowerShell v3 or higher with Execution policy set to RemoteSigned or Unrestricted
+- [MSOnline Module](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-msonlinev1?view=azureadps-1.0) (If configuring O365 User)
+- ADModule (It can run on a domain joined machine with **RSAT** tools installed as well as on domain controllers)
