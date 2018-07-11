@@ -58,3 +58,22 @@ When creating an Office 365 user you can assign them a license right away. Accou
 
 In the Shared Mailboxes tab, you can grant your user Full Access, Send-As, or Send on Behalf of permissions on Shared Mailboxes. If you select Full Access you can also configure AutoMapping (if the mailbox will automatically appear in the users Outlook).
 
+### Active Directory Groups
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/AD-groups.png" width="500">
+
+You can check which groups you want your user to be a member of. This allows you to configure things such as permissions during the new user creation process instead of after.
+
+### Multi-Factor Authentication
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-MFA.png" width="500">
+
+If you set Multi-Factor Authentication to True then MFA will be turned on when the user signs in for the first time. They will be prompted to set up MFA (they can enter their cell phone number to receive the MFA token via text) upon their first logon.
+
+### Dynamic Pre-Reqs
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/ezgif.com-video-to-gif-3.gif" width="500">
+
+Certain fields are required prior to creating your user. These fields will have an asterisk and be in red. Once they have enough valid data the field will change to black and the asterisk will be removed. The "Create User" button will remain disabled until you have met all the pre-reqs to ensure your user is created without issues.
+
+### AD Sync
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/ADSync.png" width="500">
+
+If the ADSync module is detected on the system, the application will automatically enable the ADSync option and disable the manual user creation for Office 365 to allow you to automatically run an ADSync once your Active Directory User has been created. 
