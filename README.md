@@ -19,7 +19,7 @@ Quickly and easily create and configure Active Directory and Office 365 Users at
 - Hide from Global Address List
 - And More!
 
-![New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif =250x250)
+![New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif) <!-- .element height="50%" width="50%" -->
 
 Active Directory User wizard
 
