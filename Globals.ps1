@@ -29,6 +29,8 @@ function Get-ScriptDirectory
 }
 
 
+$Version = "1.0.0"
+$BuildDate = "Tuesday, July 10th, 2018"
 
 
 $Sku = @{
