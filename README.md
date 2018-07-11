@@ -19,14 +19,14 @@ Quickly and easily create and configure Active Directory and Office 365 Users at
 - Hide from Global Address List
 - And More!
 
-[New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif)
+[!New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif)
 
-[New Office 365 User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-3.gif)
+[!New Office 365 User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-3.gif)
 
 ___
 
 ## .Features
 
-[Logging](http://thelazyadministrator.com/wp-content/uploads/2018/07/ezgif.com-video-to-gif-2.gif)
+[!Logging](http://thelazyadministrator.com/wp-content/uploads/2018/07/ezgif.com-video-to-gif-2.gif)
 
-[Password Confirmation and Random generation](http://thelazyadministrator.com/wp-content/uploads/2018/07/ezgif.com-video-to-gif-1.gif)
+[!Password Confirmation and Random generation](http://thelazyadministrator.com/wp-content/uploads/2018/07/ezgif.com-video-to-gif-1.gif)
