@@ -54,3 +54,7 @@ When creating an Office 365 user you can assign them a license right away. Accou
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/o365-shared-mailboxes.png" width="500">
 
 In the Shared Mailboxes tab, you can grant your user Full Access, Send-As, or Send on Behalf of permissions on Shared Mailboxes. If you select Full Access you can also configure AutoMapping (if the mailbox will automatically appear in the users Outlook).
+
+
+___
+[Download EXE File](https://github.com/bwya77/AD-O365-Master-User-Creator/blob/master/bin/x64/Master%20User%20Creator.exe?raw=true)
