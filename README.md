@@ -39,3 +39,5 @@ When you create your Active Directory User you can specify which OU you want the
 
 ![Office 365 Friendly License Name and Assignment](http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png)
 When creating an Office 365 user you can assign them a license right away. AccountSKUs are converted to friendly names to make picking out a license easier.
+
+![Shared Mailboxes](http://thelazyadministrator.com/wp-content/uploads/2018/07/o365-shared-mailboxes.png)In the Shared Mailboxes tab, you can grant your user Full Access, Send-As, or Send on Behalf of permissions on Shared Mailboxes. If you select Full Access you can also configure AutoMapping (if the mailbox will automatically appear in the users Outlook).
