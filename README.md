@@ -19,12 +19,12 @@ Quickly and easily create and configure Active Directory and Office 365 Users at
 - Hide from Global Address List
 - And More!
 
-![New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif)<!-- .element height="20%" width="20%" -->
+![New Active Directory User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif)
 
 Active Directory User wizard
 
 
-![New Office 365 User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-3.gif) <!-- .element height="50%" width="50%" -->
+![New Office 365 User](http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-3.gif)
 
 Office 365 User Wizard
 
@@ -42,16 +42,16 @@ The console log will display everything it’s working on every step of the way.
 When creating your new user (AD or O365) you can either generate a random password or manually enter one in. PowerShell checks both strings and will not let you create your user if both passwords do not match. This ensures that it is entered correctly the first time.
 
 
-![Organizational Unit](http://thelazyadministrator.com/wp-content/uploads/2018/07/OU-Place.png) <!-- .element height="50%" width="50%" -->
+![Organizational Unit](http://thelazyadministrator.com/wp-content/uploads/2018/07/OU-Place.png)
 
 When you create your Active Directory User you can specify which OU you want them to reside in by using the drop-down. If nothing is selected it will place them in whichever OU you configured new User objects to be placed in.
 
 
-![Office 365 Friendly License Name and Assignment](http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png) <!-- .element height="50%" width="50%" -->
+![Office 365 Friendly License Name and Assignment](http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png)
 
 When creating an Office 365 user you can assign them a license right away. AccountSKUs are converted to friendly names to make picking out a license easier.
 
 
-![Shared Mailboxes](http://thelazyadministrator.com/wp-content/uploads/2018/07/o365-shared-mailboxes.png) <!-- .element height="50%" width="50%" -->
+![Shared Mailboxes](http://thelazyadministrator.com/wp-content/uploads/2018/07/o365-shared-mailboxes.png)
 
 In the Shared Mailboxes tab, you can grant your user Full Access, Send-As, or Send on Behalf of permissions on Shared Mailboxes. If you select Full Access you can also configure AutoMapping (if the mailbox will automatically appear in the users Outlook).
