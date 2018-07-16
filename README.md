@@ -79,9 +79,9 @@ If you set Multi-Factor Authentication to True then MFA will be turned on when t
 Certain fields are required prior to creating your user. These fields will have an asterisk and be in red. Once they have enough valid data the field will change to black and the asterisk will be removed. The "Create User" button will remain disabled until you have met all the pre-reqs to ensure your user is created without issues.
 
 ### AD Sync
-<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/ADSync.png" width="500">
+<img src="hhttp://thelazyadministrator.com/wp-content/uploads/2018/07/ADSync-1.png" width="500">
 
-Run an ADSync locally if the module is installed or invoke it on a remote server.
+If you have ADConnect/ADSync configured for your Office 365 tenant you can run it locally or against a remote server. ADSync will disable the manual user creation for Office 365 to allow you to automatically run an ADSync once your Active Directory User has been created.
 
 ### Copy Attributes
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/CopyAttributes.png" width="200">
