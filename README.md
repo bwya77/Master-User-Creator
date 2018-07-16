@@ -81,7 +81,7 @@ Certain fields are required prior to creating your user. These fields will have 
 ### AD Sync
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/ADSync.png" width="500">
 
-If the ADSync module is detected on the system, the application will automatically enable the ADSync option and disable the manual user creation for Office 365 to allow you to automatically run an ADSync once your Active Directory User has been created. 
+Run an ADSync locally if the module is installed or invoke it on a remote server.
 
 ### Copy Attributes
 <img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/CopyAttributes.png" width="200">
