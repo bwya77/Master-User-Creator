@@ -7,5 +7,6 @@
     <File>Globals.ps1</File>
     <File>MessageBox.psf</File>
     <File>Startup.pss</File>
+    <File>ChangeLog.psf</File>
   </OpenFiles>
 </ProjectState>

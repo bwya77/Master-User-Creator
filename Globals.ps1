@@ -29,8 +29,8 @@ function Get-ScriptDirectory
 }
 
 
-$Version = "1.0.0"
-$BuildDate = "Tuesday, July 10th, 2018"
+$Version = "1.0.1"
+$BuildDate = "Tuesday, July 15th, 2018"
 
 
 $Sku = @{
@@ -119,6 +119,7 @@ $Sku = @{
 	"STANDARDWOFFPACK_IW_STUDENT"	     = "Office 365 Education for Students"
 	"STANDARDWOFFPACK_IW_FACULTY"	     = "Office 365 Education for Faculty"
 	"EOP_ENTERPRISE_FACULTY"			 = "Exchange Online Protection for Faculty"
+	"EOP_ENTERPRISE_STUDENT"			 = "Exchange Online Protection for Students"
 	"EXCHANGESTANDARD_STUDENT"		     = "Exchange Online (Plan 1) for Students"
 	"OFFICESUBSCRIPTION_STUDENT"		 = "Office ProPlus Student Benefit"
 	"STANDARDWOFFPACK_FACULTY"		     = "Office 365 Education E1 for Faculty"
@@ -148,6 +149,16 @@ $Sku = @{
 	"MCOPSTN2"						     = "Domestic and International Calling Plan"
 	"FLOW_P1"						     = "Microsoft Flow Plan 1"
 	"FLOW_P2"						     = "Microsoft Flow Plan 2"
+	"EXCHANGEENTERPRISE_FACULTY"		 = "Microsoft Office 365 Exchange Online (Plan 2) only for Faculty"
+	"OFFICESUBSCRIPTION_FACULTY"		 = "Office 365 ProPlus Faculty Benefit"
+	"POWERAPPS_VIRAL"				     = "Microsoft Power Apps & Flow"
+	"AX7_USER_TRIAL"					 = "Microsoft Dynamics AX7 User Trial"
+	"CRM_HYBRIDCONNECTOR"			     = "CRM_HYBRIDCONNECTOR"
+	"DESKLESS"						     = "Microsoft StaffHub"
+	"EOP_ENTERPRISE"					 = "Exchange Online Protection"
+	"GLOBAL_SERVICE_MONITOR"			 = "Global Service Monitor Online Service"
+	"POWERAPPS_INDIVIDUAL_USER"		     = "Microsoft PowerApps and Logic flows"
+	"STREAM"							 = "Microsoft Stream"
 }
 
 
