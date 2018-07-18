@@ -88,6 +88,11 @@ If you have ADConnect/ADSync configured for your Office 365 tenant you can run i
 
 When you go to create an Office 365 user, you have the option of copying the attributes you just entered for your Active Directory user. This is extremely beneficial in environments that do not have ADSync set up. Instead of entering everything twice, you can just click a button and everything will copy over. 
 
+### Account Disabled
+<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/Account_disabled.png" width="200">
+
+You can specify the exact time and date you want an account to be disabled. The application will also do DateMath to let you know how long until that account expires.
+
 ___
 ## Prerequisites
 - PowerShell v3 or higher with Execution policy set to RemoteSigned or Unrestricted
