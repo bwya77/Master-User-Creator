@@ -480,8 +480,18 @@ Fy6m/xz89/8BhtC0j/jCBwA=</Form>
   <Code><![CDATA[
 $formChangelog_Load={
 	$textboxchangelog.Text =
-	"v1.0.1
+	"v1.0.2
+ADDED:
+- Set an Active Directory account to expire
+- DatePicker and TimePicker
+- Label below DateTimePicker will do DateMath to figure out how many days, hours, and minutes until the account will expire
+- DatePicker uses a month grid view
 
+FIXED:
+- Fixed tab order in Office 365 user on Account Page
+
+
+v1.0.1
 ADDED:
 - Option to enter your DirSync server to invoke an ADSync
 - Changelog form
