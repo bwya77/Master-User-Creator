@@ -480,7 +480,17 @@ Fy6m/xz89/8BhtC0j/jCBwA=</Form>
   <Code><![CDATA[
 $formChangelog_Load={
 	$textboxchangelog.Text =
-	"v1.0.2
+	"v1.0.3
+ADDED:
+- ADSync Server Text box enable state toggles with the ADSync checkbox
+- External log file will default to '$env:TEMP\MUC.txt'
+- If canceling out of setting external log file path, path will not default to null
+
+CHANGED:
+- Changed ADSync text
+
+
+v1.0.2
 ADDED:
 - Set an Active Directory account to expire
 - DatePicker and TimePicker
