@@ -482,7 +482,7 @@ $formChangelog_Load={
 	$textboxchangelog.Text =
 	"v1.0.4
 ADDED:
-- Set AD Users Priamry Group
+- Set AD Users Priamary Group
 - Primary Group combobox items will be Domain Users + selected AD Groups
 - Primary Groups by default will be Domain Users
 
