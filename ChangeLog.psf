@@ -480,7 +480,13 @@ Fy6m/xz89/8BhtC0j/jCBwA=</Form>
   <Code><![CDATA[
 $formChangelog_Load={
 	$textboxchangelog.Text =
-	"v1.0.4
+	"v1.0.5
+FIXED:
+- MFA login not finding the EXOSession module
+- Fixed Shared Mailbox AutoMapping not applying
+
+
+v1.0.4
 ADDED:
 - Set AD Users Priamary Group
 - Primary Group combobox items will be Domain Users + selected AD Groups
