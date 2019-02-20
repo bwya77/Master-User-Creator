@@ -29,7 +29,7 @@ function Get-ScriptDirectory
 }
 
 
-$Version = "1.0.5"
+$Version = "2.0.0"
 $BuildDate = "Tuesday, July 24th, 2018"
 
 
@@ -162,7 +162,7 @@ $Sku = @{
 }
 
 
-$ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" } -ErrorAction SilentlyContinue
+$ADSyncModule = Get-Module -ListAvailable -Name "ADSync" 
 
 #region Get-DateSortable
 function Get-datesortable

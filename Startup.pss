@@ -20,9 +20,35 @@ function Main {
 	Param ([String]$Commandline)
 		
 	#--------------------------------------------------------------------------
-	Import-Module ActiveDirectory -ErrorAction SilentlyContinue
-	Import-Module ADSync -ErrorAction SilentlyContinue
 	
+	
+	
+	###REG KEYS
+	#Check if RegKey is present, if not then create one
+	$RegKey = Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator' -ErrorAction SilentlyContinue
+	if (! $RegKey)
+	{
+		#Create the root key
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\O365' -Force
+		
+		
+	}
+	$PasswordSettings = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name PasswordGen -ErrorAction SilentlyContinue).PasswordGen
+	If ($null -eq $PasswordSettings)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name PasswordGen -Value 0 -Force | Out-Null
+		
+	}
+	
+	$UserFormatDisplayName = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatDisplayName -ErrorAction SilentlyContinue).UserFormatDisplayName
+	If ($null -eq $UserFormatDisplayName)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatDisplayName -Value "%FirstName% %Initial% %LastName%" -Force | Out-Null
+		
+	}
+
 	
 	#--------------------------------------------------------------------------
 	
