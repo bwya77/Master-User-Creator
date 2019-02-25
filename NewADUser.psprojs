@@ -4,11 +4,13 @@
   <OpenFolders />
   <OpenFiles>
     <File>MainForm.psf</File>
-    <File>Globals.ps1</File>
     <File>MessageBox.psf</File>
     <File>ChangeLog.psf</File>
     <File>CopyFromUser.psf</File>
     <File>OptionsMenu.psf</File>
     <File>UserFormattingHelp.psf</File>
+    <File>Startup.pss</File>
+    <File>O365LicenseSelection.psf</File>
+    <File>Globals.ps1</File>
   </OpenFiles>
 </ProjectState>

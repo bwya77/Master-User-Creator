@@ -32,6 +32,34 @@ function Get-ScriptDirectory
 $Version = "2.0.0"
 $BuildDate = "Tuesday, July 24th, 2018"
 
+$global:CacheGroups = "$env:TEMP\MUCCacheGroups.txt"
+If ((Test-Path $CacheGroups) -eq $true)
+{
+	Remove-Item $CacheGroups -Force
+}
+New-Item -ItemType File $CacheGroups -Force
+
+$global:CacheDistroGroupsFile = "$env:TEMP\MUCCacheDistroGroups.txt"
+If ((Test-Path $CacheDistroGroupsFile ) -eq $true)
+{
+	Remove-Item $CacheDistroGroupsFile -Force
+}
+
+New-Item -ItemType File $CacheDistroGroupsFile -Force
+
+$global:CacheSecurityGroupsFile = "$env:TEMP\MUCCacheSecurityGroups.txt"
+If ((Test-Path $CacheSecurityGroupsFile) -eq $true)
+{
+	Remove-Item $CacheSecurityGroupsFile -Force
+}
+
+New-Item -ItemType File $CacheSecurityGroupsFile -Force
+
+$CachedLicenses = "$env:TEMP\MUCLicenses.txt"
+If ((Test-Path $CachedLicenses) -eq $true)
+{
+	Remove-Item $CachedLicenses -Force
+}
 
 $Sku = @{
 	"O365_BUSINESS_ESSENTIALS"		     = "Office 365 Business Essentials"
@@ -159,8 +187,14 @@ $Sku = @{
 	"GLOBAL_SERVICE_MONITOR"			 = "Global Service Monitor Online Service"
 	"POWERAPPS_INDIVIDUAL_USER"		     = "Microsoft PowerApps and Logic flows"
 	"STREAM"							 = "Microsoft Stream"
+	"CRMSTORAGE"						 = "Microsoft Dynamics CRM Online Additional Storage"
+	"SMB_APPS"						     = "Microsoft Business Apps"
+	"MICROSOFT_BUSINESS_CENTER"		     = "Microsoft Business Center"
+	"DYN365_TEAM_MEMBERS"			     = "Dynamics 365 Team Members"
+	"EMSPREMIUM"						 = "ENTERPRISE MOBILITY + SECURITY E5"
 }
 
+[int]$Global:click = 0
 
 $ADSyncModule = Get-Module -ListAvailable -Name "ADSync" 
 
