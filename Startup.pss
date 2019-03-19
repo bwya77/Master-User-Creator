@@ -21,7 +21,7 @@ function Main {
 		
 	#--------------------------------------------------------------------------
 	
-	
+	$Global:Licenses2Add = New-Object 'System.Collections.Generic.List[System.Object]'
 	
 	###REG KEYS
 	#Check if RegKey is present, if not then create one

@@ -12,5 +12,6 @@
     <File>Startup.pss</File>
     <File>O365LicenseSelection.psf</File>
     <File>Globals.ps1</File>
+    <File>CopyFromO365User.psf</File>
   </OpenFiles>
 </ProjectState>

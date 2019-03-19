@@ -61,6 +61,9 @@ If ((Test-Path $CachedLicenses) -eq $true)
 	Remove-Item $CachedLicenses -Force
 }
 
+
+
+
 $Sku = @{
 	"O365_BUSINESS_ESSENTIALS"		     = "Office 365 Business Essentials"
 	"O365_BUSINESS_PREMIUM"			     = "Office 365 Business Premium"
@@ -192,6 +195,8 @@ $Sku = @{
 	"MICROSOFT_BUSINESS_CENTER"		     = "Microsoft Business Center"
 	"DYN365_TEAM_MEMBERS"			     = "Dynamics 365 Team Members"
 	"EMSPREMIUM"						 = "ENTERPRISE MOBILITY + SECURITY E5"
+	"AAD_PREMIUM_P2"					 = "Azure AD Premium P2"
+	"SPB"                                = "Microsoft 365 Business"
 }
 
 [int]$Global:click = 0
