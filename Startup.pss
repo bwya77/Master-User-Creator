@@ -32,8 +32,10 @@ function Main {
 		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator' -Force
 		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\AD' -Force
 		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\O365' -Force
-		
-		
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\UpperCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\UpperCase\O365' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\LowerCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\LowerCase\O365' -Force
 	}
 	$PasswordSettings = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name PasswordGen -ErrorAction SilentlyContinue).PasswordGen
 	If ($null -eq $PasswordSettings)
@@ -48,7 +50,13 @@ function Main {
 		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatDisplayName -Value "%FirstName% %Initial% %LastName%" -Force | Out-Null
 		
 	}
-
+	
+	$O365EmailFormatting = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365Email -ErrorAction SilentlyContinue).UserFormatO365Email
+	If ($null -eq $O365EmailFormatting)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365Email -Value "%FirstLetterFirstName%%LastName%" -Force | Out-Null
+		
+	}
 	
 	#--------------------------------------------------------------------------
 	
