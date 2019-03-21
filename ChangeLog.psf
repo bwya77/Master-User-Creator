@@ -545,13 +545,41 @@ ADDED:
 - Automatically default to MFA or non-MFA Office 365 sign on
 - Set your Office 365 country code, no need to keep changing every launch
 - Added the following SKUs and friendly names:
-		CRMSTORAGE					 = Microsoft Dynamics CRM Online Additional Storage
-		SMB_APPS					 = Microsoft Business Apps
-		MICROSOFT_BUSINESS_CENTER	 = Microsoft Business Center
-		DYN365_TEAM_MEMBERS			 = Dynamics 365 Team Members
-        EMSPREMIUM                   = ENTERPRISE MOBILITY + SECURITY E5
-		AAD_PREMIUM_P2				 = Azure AD Premium P2
-	    SPB                          = Microsoft 365 Business
+	CRMSTORAGE = Microsoft Dynamics CRM Online Additional Storage
+	SMB_APPS = Microsoft Business Apps
+	MICROSOFT_BUSINESS_CENTER = Microsoft Business Center
+	DYN365_TEAM_MEMBERS	= Dynamics 365 Team Members
+    EMSPREMIUM = ENTERPRISE MOBILITY + SECURITY E5
+	AAD_PREMIUM_P2 = Azure AD Premium P2
+	SPB = Microsoft 365 Business
+	TEAMS1 = Microsoft Teams
+	MCOPSTN1 = Domestic Calling Plan
+	MCOPSTN2 = International Calling Plan
+	MCOPSTNPP = Communication Credits	
+	CRMTESTINSTANCE = CRM Test Instance
+	DESKLESSPACK_YAMMER	= Office 365 Enterprise K1 with Yammer
+	ENTERPRISEPACKWSCAL = Office 365 Enterprise E4
+	EXCHANGE_S_STANDARD	= Exchange Online (Plan 2)
+	EXCHANGEARCHIVE	= Exchange Online Archiving
+	EXCHANGETELCO = Exchange Online POP
+	LITEPACK_P2	= Office 365 Small Business Premium
+	MCOIMP = Lync Online Plan 1
+	MCVOICECONF	= Lync Online (Plan 3)
+	MIDSIZEPACK = Office 365 Midsize Business
+	NBPROFESSIONALFORCRM = Microsoft Social Listening Professional
+	ONEDRIVESTANDARD = OneDrive
+	POWER_BI_INDIVIDUAL_USER = Power BI for Office 365 Individual
+	PROJECT_CLIENT_SUBSCRIPTION	= Project Pro for Office 365
+	PROJECT_ESSENTIALS = Project Lite
+	SHAREPOINTENTERPRISE = SharePoint Online (Plan 2)
+	SHAREPOINTPARTNER = SharePoint Online Partner Access
+	SMB_BUSINESS = Business
+	SMB_BUSINESS_ESSENTIALS = Business Essentials
+	SMB_BUSINESS_PREMIUM = Business Premium
+	SQL_IS_SSIM	= Power BI Information Services
+	VISIO_CLIENT_SUBSCRIPTION = Visio Pro for Office 365
+	WACONEDRIVESTANDARD = OneDrive Pack
+
 
 
 CHANGED:

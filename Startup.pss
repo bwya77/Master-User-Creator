@@ -51,11 +51,19 @@ function Main {
 		
 	}
 	
-	$O365EmailFormatting = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365Email -ErrorAction SilentlyContinue).UserFormatO365Email
-	If ($null -eq $O365EmailFormatting)
+	$O365FormatDisplayName = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365DisplayName -ErrorAction SilentlyContinue).UserFormatO365DisplayName
+	If ($null -eq $UserFormatDisplayName)
 	{
-		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365Email -Value "%FirstLetterFirstName%%LastName%" -Force | Out-Null
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365DisplayName -Value "%FirstName% %LastName%" -Force | Out-Null
 		
+	}
+	
+	
+	$O365EmailFormatting = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365Email -ErrorAction SilentlyContinue).UserFormatO365Email
+	If (($O365EmailFormatting -eq $config) -or ($config -eq ""))
+	{
+		$config = "%FirstLetterFirstName%%LastName%%UserPrincipalNameDomain%"
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365Email -Value $config -Force | Out-Null
 	}
 	
 	#--------------------------------------------------------------------------
