@@ -538,6 +538,7 @@ ADDED:
 - Ability to live filter and unfilter O365 Mail groups!
 - Ability to live filter and unfilter O365 Security groups!
 - Better caching for performance 
+- Select items you do not want to reset/clear when resetting / clearing form
 - Added employeeType attribute for new AD Users
 - Added employeeNumber attribute for new AD Users
 - Automatically check creation of AD users on launch

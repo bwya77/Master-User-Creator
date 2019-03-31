@@ -3,10 +3,11 @@
   <FileID>46747728-ffe8-444b-ac66-f10472371add</FileID>
   <OpenFolders />
   <OpenFiles>
-    <File>MainForm.psf</File>
     <File>MessageBox.psf</File>
     <File>ChangeLog.psf</File>
     <File>CopyFromUser.psf</File>
+    <File>MainForm.psf</File>
+    <File>O365UserFormattingHelp.psf</File>
     <File>OptionsMenu.psf</File>
     <File>UserFormattingHelp.psf</File>
     <File>Startup.pss</File>

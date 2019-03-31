@@ -707,32 +707,26 @@ $formUserFormattingHelp_Load = {
 	
 	
 	$richtextboxvariable.Text = "%FirstName%
-%Initial%
 %LastName%
-%EmployeeID%
-%EmployeeNumber%
 %FirstLetterFirstName%
 %FirstLetterLastName%
 %UPN%
 %UserPrincipalName%
 %UserPrincipalNameDomain%
-%SamAccountName%"
+%EMail%"
 	
 	$richtextboxDefine.Text = "First Name Attribute
-Initial Attribute
 Last Name Attribute
-Employee ID Attribute
-Employee Number Attribute
 The First Letter of the First Name Attribute
 The First Letter of the Last Name Attribute
 The User Logon Name (UPN) Attribute
 The User Logon Name (UPN) Attribute
 The Domain of the User Principal Name (UPN)
-The User Logon Name (Pre-Windows 2000) Attribute"
+The Email Attribute"
 	
 	$richtextboxexamples.Text = "'%FirstLetterLastName%%LastName&@TheLazyAdministrator.com' for e-mail would give me BWyatt@TheLazyAdministrator.com
 
-'%EmployeeNumber - %Firstname% %LastName%' for DisplayName would give me 880 - Bradley Wyatt
+'%Firstname% %LastName%' for DisplayName would give me Bradley Wyatt
 
 '%LastName%, %FirstName%' in DisplayName would give me Wyatt, Bradley
 "

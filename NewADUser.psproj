@@ -15,5 +15,6 @@
     <File Build="0" ReferenceFunction="Show-UserFormattingHelp_psf">UserFormattingHelp.psf</File>
     <File Build="0" ReferenceFunction="Show-O365LicenseSelection_psf">O365LicenseSelection.psf</File>
     <File Build="0" ReferenceFunction="Show-CopyFromO365User_psf">CopyFromO365User.psf</File>
+    <File Build="0" ReferenceFunction="Show-O365UserFormattingHelp_psf">O365UserFormattingHelp.psf</File>
   </Files>
 </Project>
