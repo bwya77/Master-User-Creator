@@ -511,7 +511,11 @@ $formChangelog_Load = {
 	}
 	
 	$textboxchangelog.Text =
-	"v2.0.0
+	"v2.0.1
+FIXED:
+- User would not go into correct OU after form reset
+
+v2.0.0
 ADDED:
 - DARK MODE :D
 - Add multiple Office 365 licenses to user
