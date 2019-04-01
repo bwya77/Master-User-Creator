@@ -1,5 +1,5 @@
 ﻿<Project Synchronized="False" SyncFilter="*.ps1;*.psm1;*.psd1;*.ps1xml;*.psf;*.pss;*.xml;*.help.txt">
-  <Version>2.0</Version>
+  <Version>2.1</Version>
   <FileID>46747728-ffe8-444b-ac66-f10472371add</FileID>
   <ProjectType>0</ProjectType>
   <Folders />
@@ -10,5 +10,11 @@
     <File Build="0" ReferenceFunction="Show-ChildForm_psf">ChildForm.psf</File>
     <File Build="0" ReferenceFunction="Show-MessageBox_psf">MessageBox.psf</File>
     <File Build="0" ReferenceFunction="Show-ChangeLog_psf">ChangeLog.psf</File>
+    <File Build="0" ReferenceFunction="Show-CopyFromUser_psf">CopyFromUser.psf</File>
+    <File Build="0" ReferenceFunction="Show-OptionsMenu_psf">OptionsMenu.psf</File>
+    <File Build="0" ReferenceFunction="Show-UserFormattingHelp_psf">UserFormattingHelp.psf</File>
+    <File Build="0" ReferenceFunction="Show-O365LicenseSelection_psf">O365LicenseSelection.psf</File>
+    <File Build="0" ReferenceFunction="Show-CopyFromO365User_psf">CopyFromO365User.psf</File>
+    <File Build="0" ReferenceFunction="Show-O365UserFormattingHelp_psf">O365UserFormattingHelp.psf</File>
   </Files>
 </Project>

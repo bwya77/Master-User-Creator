@@ -20,9 +20,67 @@ function Main {
 	Param ([String]$Commandline)
 		
 	#--------------------------------------------------------------------------
-	Import-Module ActiveDirectory -ErrorAction SilentlyContinue
-	Import-Module ADSync -ErrorAction SilentlyContinue
 	
+	$Global:Licenses2Add = New-Object 'System.Collections.Generic.List[System.Object]'
+	
+	###REG KEYS
+	#Check if RegKey is present, if not then create one
+	$RegKey = Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator' -ErrorAction SilentlyContinue
+	if (! $RegKey)
+	{
+		#Create the root key
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\TitleCase\O365' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\UpperCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\UpperCase\O365' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\LowerCase\AD' -Force
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\LowerCase\O365' -Force
+	}
+	
+	$RegKeyReset = Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\Reset' -ErrorAction SilentlyContinue
+	if (! $RegKeyReset)
+	{
+		New-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\Reset' -Force
+	}
+	
+	$PasswordSettings = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name PasswordGen -ErrorAction SilentlyContinue).PasswordGen
+	If ($null -eq $PasswordSettings)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name PasswordGen -Value 0 -Force | Out-Null
+		
+	}
+	
+	$UserFormatDisplayName = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatDisplayName -ErrorAction SilentlyContinue).UserFormatDisplayName
+	If ($null -eq $UserFormatDisplayName)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatDisplayName -Value "%FirstName% %Initial% %LastName%" -Force | Out-Null
+		
+	}
+	
+	$O365FormatDisplayName = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365DisplayName -ErrorAction SilentlyContinue).UserFormatO365DisplayName
+	If ($null -eq $UserFormatDisplayName)
+	{
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365DisplayName -Value "%FirstName% %LastName%" -Force | Out-Null
+		
+	}
+	
+	
+	$O365EmailFormatting = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name UserFormatO365Email -ErrorAction SilentlyContinue).UserFormatO365Email
+	If (($O365EmailFormatting -eq $config) -or ($config -eq ""))
+	{
+		$config = "%FirstLetterFirstName%%LastName%%UserPrincipalNameDomain%"
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name UserFormatO365Email -Value $config -Force | Out-Null
+	}
+	
+	#Thank you to user that has helped suggest items for v2
+	$Hill = (Get-ItemProperty 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' | Get-ItemProperty -Name AHill -ErrorAction SilentlyContinue).AHill
+	If ($Hill -eq 1)
+	{
+		Add-Type -AssemblyName System.Windows.Forms
+		[System.Windows.Forms.MessageBox]::Show("Thank you Aaron Hill for all your ideas in improving this application, V2 wouldn't be as feature filled without all your ideas.", 'Thank You', 'OK')
+		Get-Item 'HKCU:\Software\TheLazyAdministrator\MasterUserCreator\' -Force | Set-ItemProperty -Name AHill -Value 0 -Force | Out-Null
+	}
 	
 	#--------------------------------------------------------------------------
 	

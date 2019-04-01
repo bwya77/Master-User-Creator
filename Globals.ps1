@@ -29,8 +29,39 @@ function Get-ScriptDirectory
 }
 
 
-$Version = "1.0.5"
-$BuildDate = "Tuesday, July 24th, 2018"
+$Version = "2.0.0"
+$BuildDate = "Monday, April 1st, 2019"
+
+$global:CacheGroups = "$env:TEMP\MUCCacheGroups.txt"
+If ((Test-Path $CacheGroups) -eq $true)
+{
+	Remove-Item $CacheGroups -Force
+}
+New-Item -ItemType File $CacheGroups -Force
+
+$global:CacheDistroGroupsFile = "$env:TEMP\MUCCacheDistroGroups.txt"
+If ((Test-Path $CacheDistroGroupsFile ) -eq $true)
+{
+	Remove-Item $CacheDistroGroupsFile -Force
+}
+
+New-Item -ItemType File $CacheDistroGroupsFile -Force
+
+$global:CacheSecurityGroupsFile = "$env:TEMP\MUCCacheSecurityGroups.txt"
+If ((Test-Path $CacheSecurityGroupsFile) -eq $true)
+{
+	Remove-Item $CacheSecurityGroupsFile -Force
+}
+
+New-Item -ItemType File $CacheSecurityGroupsFile -Force
+
+$CachedLicenses = "$env:TEMP\MUCLicenses.txt"
+If ((Test-Path $CachedLicenses) -eq $true)
+{
+	Remove-Item $CachedLicenses -Force
+}
+
+
 
 
 $Sku = @{
@@ -68,7 +99,7 @@ $Sku = @{
 	"ECAL_SERVICES"					     = "ECAL"
 	"EMS"							     = "Enterprise Mobility Suite"
 	"RIGHTSMANAGEMENT_ADHOC"			 = "Windows Azure Rights Management"
-	"MCOMEETADV"						 = "PSTN conferencing"
+	"MCOMEETADV"						 = "PSTN Conferencing"
 	"SHAREPOINTSTORAGE"				     = "SharePoint storage"
 	"PLANNERSTANDALONE"				     = "Planner Standalone"
 	"CRMIUR"							 = "CMRIUR"
@@ -146,7 +177,6 @@ $Sku = @{
 	"SPE_E5"							 = "Microsoft 365 E5"
 	"SPE_E3"							 = "Microsoft 365 E3"
 	"ATA"							     = "Advanced Threat Analytics"
-	"MCOPSTN2"						     = "Domestic and International Calling Plan"
 	"FLOW_P1"						     = "Microsoft Flow Plan 1"
 	"FLOW_P2"						     = "Microsoft Flow Plan 2"
 	"EXCHANGEENTERPRISE_FACULTY"		 = "Microsoft Office 365 Exchange Online (Plan 2) only for Faculty"
@@ -159,10 +189,47 @@ $Sku = @{
 	"GLOBAL_SERVICE_MONITOR"			 = "Global Service Monitor Online Service"
 	"POWERAPPS_INDIVIDUAL_USER"		     = "Microsoft PowerApps and Logic flows"
 	"STREAM"							 = "Microsoft Stream"
+	"CRMSTORAGE"						 = "Microsoft Dynamics CRM Online Additional Storage"
+	"SMB_APPS"						     = "Microsoft Business Apps"
+	"MICROSOFT_BUSINESS_CENTER"		     = "Microsoft Business Center"
+	"DYN365_TEAM_MEMBERS"			     = "Dynamics 365 Team Members"
+	"EMSPREMIUM"						 = "Enterprise MobilityY + Security E5"
+	"AAD_PREMIUM_P2"					 = "Azure AD Premium P2"
+	"SPB"							     = "Microsoft 365 Business"
+	"TEAMS1"							 = "Microsoft Teams"
+	"MCOPSTN1"						     = "Domestic Calling Plan"
+	"MCOPSTN2"						     = "International Calling Plan"
+	"MCOPSTNPP"						     = "Communication Credits"
+	"NONPROFIT_PORTAL"				     = "Nonprofit Portal"
+	"CRMTESTINSTANCE"				     = "CRM Test Instance"
+	"DESKLESSPACK_YAMMER"			     = "Office 365 Enterprise K1 with Yammer"
+	"ENTERPRISEPACKWSCAL"			     = "Office 365 Enterprise E4"
+	"EXCHANGE_S_STANDARD"			     = "Exchange Online (Plan 2)"
+	"EXCHANGEARCHIVE"				     = "Exchange Online Archiving"
+	"EXCHANGETELCO"					     = "Exchange Online POP"
+	"LITEPACK_P2"					     = "Office 365 Small Business Premium"
+	"MCOIMP"							 = "Lync Online Plan 1"
+	"MCVOICECONF"					     = "Lync Online (Plan 3)"
+	"MIDSIZEPACK"					     = "Office 365 Midsize Business"
+	"NBPROFESSIONALFORCRM"			     = "Microsoft Social Listening Professional"
+	"ONEDRIVESTANDARD"				     = "OneDrive"
+	"POWER_BI_INDIVIDUAL_USER"		     = "Power BI for Office 365 Individual"
+	"PROJECT_CLIENT_SUBSCRIPTION"	     = "Project Pro for Office 365"
+	"PROJECT_ESSENTIALS"				 = "Project Lite"
+	"SHAREPOINTENTERPRISE"			     = "SharePoint Online (Plan 2)"
+	"SHAREPOINTPARTNER"				     = "SharePoint Online Partner Access"
+	"SMB_BUSINESS"					     = "Business"
+	"SMB_BUSINESS_ESSENTIALS"		     = "Business Essentials"
+	"SMB_BUSINESS_PREMIUM"			     = "Business Premium"
+	"SQL_IS_SSIM"					     = "Power BI Information Services"
+	"VISIO_CLIENT_SUBSCRIPTION"		     = "Visio Pro for Office 365"
+	"WACONEDRIVESTANDARD"			     = "OneDrive Pack"
+
 }
 
+[int]$Global:click = 0
 
-$ADSyncModule = Get-Module | Where-Object { $_.Name -eq "ADSync" } -ErrorAction SilentlyContinue
+$ADSyncModule = Get-Module -ListAvailable -Name "ADSync" 
 
 #region Get-DateSortable
 function Get-datesortable
