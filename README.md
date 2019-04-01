@@ -4,9 +4,13 @@
 - [Blog Post](http://thelazyadministrator.com/2018/07/10/tool-create-and-configure-active-directory-and-office-365-users-at-once/)
 
 ## Table of Contents
+- [UI](https://github.com/bwya77/Master-User-Creator/blob/master/README.md#UI)
 - [Description](https://github.com/bwya77/Master-User-Creator/blob/master/README.md#description)
 - [Features](https://github.com/bwya77/Master-User-Creator/blob/master/README.md#features)
 - [Prerequisites](https://github.com/bwya77/Master-User-Creator/blob/master/README.md#prerequisites)
+
+## .UI
+<img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/ezgif.com-gif-maker.gif" width="500">
 
 ## .Description
 Quickly and easily create and configure Active Directory and Office 365 Users at once. In Active Directory Users and Computers if you want to enter items like E-Mail, password, group permissions, login scripts, home drive, etc. you would have to complete the new user wizard, find, and then edit your user in Active Directory, and fill in the necessary information. Master User Creator lets you configure hundreds of items for your user without ever leaving the wizard. You can configure items like:
@@ -26,12 +30,6 @@ Quickly and easily create and configure Active Directory and Office 365 Users at
 - Shared Mailboxes (grant your user Full Access, Send-As or Send on Behalf permissions on Shared Mailboxes, configure AutoMapping)
 - Hide from Global Address List
 - And More!
-
-### Active Directory User
-<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-2.gif" width="500">
-
-### Office 365 User
-<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/Webp.net-gifmaker-3.gif" width="500">
 
 
 ___
@@ -53,8 +51,8 @@ When creating your new user (AD or O365) you can either generate a random passwo
 
 When you create your Active Directory User you can specify which OU you want them to reside in by using the drop-down. If nothing is selected it will place them in whichever OU you configured new User objects to be placed in.
 
-### Office 365 Licenses
-<img src="http://thelazyadministrator.com/wp-content/uploads/2018/07/O365-License.png" width="500">
+### Office 365 Licenses (Add Multiple!)
+<img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/ezgif.com-video-to-gif-1.gif" width="500">
 
 When creating an Office 365 user you can assign them a license right away. AccountSKUs are converted to friendly names to make picking out a license easier.
 
