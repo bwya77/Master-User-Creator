@@ -10,7 +10,7 @@
 - [Prerequisites](https://github.com/bwya77/Master-User-Creator/blob/master/README.md#prerequisites)
 
 ## .UI
-<img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/ezgif.com-gif-maker.gif" width="400" height="400" />
+<img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/ezgif.com-gif-maker.gif" width="1200" height="675" />
 
 ## .Description
 Quickly and easily create and configure Active Directory and Office 365 Users at once. In Active Directory Users and Computers if you want to enter items like E-Mail, password, group permissions, login scripts, home drive, etc. you would have to complete the new user wizard, find, and then edit your user in Active Directory, and fill in the necessary information. Master User Creator lets you configure hundreds of items for your user without ever leaving the wizard. You can configure items like:
