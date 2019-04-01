@@ -29,7 +29,7 @@ function Get-ScriptDirectory
 }
 
 
-$Version = "2.0.0"
+$Version = "2.0.1"
 $BuildDate = "Monday, April 1st, 2019"
 
 $global:CacheGroups = "$env:TEMP\MUCCacheGroups.txt"
