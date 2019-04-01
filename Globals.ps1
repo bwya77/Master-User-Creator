@@ -30,7 +30,7 @@ function Get-ScriptDirectory
 
 
 $Version = "2.0.0"
-$BuildDate = "Wednesday, April 1st, 2019"
+$BuildDate = "Monday, April 1st, 2019"
 
 $global:CacheGroups = "$env:TEMP\MUCCacheGroups.txt"
 If ((Test-Path $CacheGroups) -eq $true)
