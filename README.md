@@ -12,7 +12,8 @@
 ## .UI
 <img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/ezgif.com-crop-1.gif"/>
 
-Dark Mode
+#### Dark Mode
+
 <img src="https://www.thelazyadministrator.com/wp-content/uploads/2019/03/DarkUI.png"/>
 
 
