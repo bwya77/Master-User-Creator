@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/bwya77/Master-User-Creator/master/Icon/Main_Icon.ico" width="25"> Master-User-Creator
 ## Links
-- [Download EXE File](https://github.com/bwya77/AD-O365-Master-User-Creator/blob/master/bin/x64/Master%20User%20Creator.exe?raw=true)
+- [Download EXE File](https://github.com/bwya77/Master-User-Creator/blob/master/Master%20User%20Creator.exe?raw=true)
 - [Blog Post](http://thelazyadministrator.com/2018/07/10/tool-create-and-configure-active-directory-and-office-365-users-at-once/)
 
 ## Table of Contents
